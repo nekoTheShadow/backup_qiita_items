@@ -5,6 +5,13 @@ import time
 import pathlib
 import datetime
 
+"""
+投稿者の記事とそれに紐づくコメントをJSON形式で取得し、ファイルとして保存します。
+記事の保存先: ${timesatmp}/item/${id}.json
+コメントの保存先: ${timesatmp}/comment/${id}.json
+ここではQiita APIを利用します。Qiita APIについては以下を参照すること: https://qiita.com/api/v2/docs
+"""
+
 def fetch_json(token, url):
     '''
     指定したURL(Qiita API)にアクセスし、レスポンスボディ(JSON)をパースする。
